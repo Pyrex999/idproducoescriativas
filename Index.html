@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inês Leitão · Escritora, Realizadora, Produtora</title>
+  <meta name="description" content="Site oficial de Inês Leitão, escritora, realizadora e produtora. Autora de 'A Maternidade não é para meninos', documentários para RTP e projetos independentes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #18120f;
+      --cream: #f7f2ea;
+      --coral: #e8553e;
+      --teal: #1b9984;
+      --gold: #f0b429;
+      --muted: #7a6e6a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 5vw;
+      background: var(--cream);
+      border-bottom: 2px solid var(--ink);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem;
+      color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+      position: relative; padding-bottom: 2px;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--coral); transition: width 0.2s;
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh; padding-top: 68px;
+      display: grid; grid-template-columns: 55% 45%;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 8vw; gap: 1.4rem;
+    }
+    .hero-pill {
+      display: inline-block; width: fit-content;
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #fff;
+      background: var(--teal); padding: 0.3rem 0.85rem; border-radius: 2px;
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif; font-weight: 900;
+      font-size: clamp(3.8rem, 6.5vw, 6.5rem); line-height: 0.92;
+      letter-spacing: -0.03em; color: var(--ink);
+    }
+    .hero-name em { font-style: italic; color: var(--coral); display: block; }
+    .hero-sub {
+      font-size: 0.98rem; font-weight: 300; color: var(--muted);
+      line-height: 1.75; max-width: 360px;
+    }
+    .hero-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content;
+      padding: 0.85rem 1.8rem; background: var(--ink); color: var(--cream);
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; text-decoration: none; border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-btn:hover { background: var(--coral); transform: translateY(-2px); }
+    .hero-right {
+      background: var(--ink); position: relative; overflow: hidden;
+      display: flex; align-items: flex-end;
+    }
+    .hr-block { position: absolute; }
+    .hr-b1 { top: 0; right: 0; width: 65%; height: 45%; background: var(--gold); opacity: 0.85; }
+    .hr-b2 { bottom: 0; left: 0; width: 50%; height: 32%; background: var(--teal); opacity: 0.7; }
+    .hr-b3 { top: 38%; left: 15%; width: 60%; height: 35%; background: var(--coral); opacity: 0.5; }
+    .hr-bigtext {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      font-family: 'Playfair Display', serif; font-size: 28vw; font-weight: 900;
+      color: rgba(255,255,255,0.03); user-select: none; white-space: nowrap;
+    }
+    .hr-caption {
+      position: relative; z-index: 2; width: 100%;
+      padding: 2rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .hr-caption-main { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: var(--cream); }
+    .hr-caption-sub { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+
+    /* SHARED */
+    section { padding: 6rem 0; }
+    .inner { max-width: 1100px; margin: 0 auto; padding: 0 8vw; }
+    .sec-head { margin-bottom: 3.5rem; }
+    .sec-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 0.6rem;
+    }
+    .sec-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700; color: var(--ink); letter-spacing: -0.02em;
+    }
+
+    /* SOBRE */
+    #sobre { background: #fff; border-top: 2px solid var(--ink); }
+    .sobre-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
+    .sobre-img {
+      width: 100%; aspect-ratio: 3/4; background: var(--ink);
+      border-radius: 2px; overflow: hidden; position: relative;
+    }
+    .sobre-img-inner {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #7c3aed 0%, var(--coral) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sobre-img-inner span {
+      font-family: 'Playfair Display', serif; font-size: 6rem;
+      font-weight: 900; color: rgba(255,255,255,0.15);
+    }
+    .sobre-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .stag {
+      font-size: 0.67rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 2px;
+    }
+    .s1 { background: var(--gold); color: var(--ink); }
+    .s2 { background: var(--teal); color: #fff; }
+    .s3 { background: var(--coral); color: #fff; }
+    .s4 { background: var(--ink); color: var(--cream); }
+
+    .sobre-body p {
+      font-size: 1rem; line-height: 1.85; color: #4a3e40; margin-bottom: 1.2rem;
+    }
+    .sobre-body strong { color: var(--ink); font-weight: 500; }
+    .sobre-quote {
+      border-left: 4px solid var(--coral);
+      padding: 1rem 1.4rem; margin: 1.8rem 0;
+      background: rgba(232,85,62,0.05);
+    }
+    .sobre-quote p {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 1.15rem !important; color: var(--ink) !important; margin: 0 !important;
+    }
+    
+    /* dual bio styling */
+    .irman { margin-top: 2rem; border-top: 1px solid rgba(26,18,15,0.1); padding-top: 1.5rem; }
+    .irman h4 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--coral); letter-spacing: -0.2px; }
+    .irman p { font-size: 0.92rem; margin-bottom: 0.7rem; }
+
+    /* OBRA */
+    #obra { background: var(--cream); border-top: 2px solid var(--ink); }
+    .obra-tabs {
+      display: flex; border: 2px solid var(--ink);
+      border-radius: 2px; overflow: hidden; width: fit-content; margin-bottom: 3rem;
+    }
+    .obra-tab {
+      padding: 0.6rem 1.8rem; font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+      background: transparent; border: none; color: var(--muted);
+      border-right: 2px solid var(--ink); transition: background 0.15s, color 0.15s;
+    }
+    .obra-tab:last-child { border-right: none; }
+    .obra-tab.active { background: var(--ink); color: var(--cream); }
+    .obra-tab:hover:not(.active) { background: rgba(26,18,15,0.06); }
+    .obra-panel { display: none; }
+    .obra-panel.active { display: block; }
+
+    /* Books */
+    .books-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .book-card {
+      background: #fff; border: 2px solid var(--ink); border-radius: 2px;
+      overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .book-card:hover { transform: translateY(-5px) rotate(-0.4deg); box-shadow: 5px 6px 0 var(--ink); }
+    .book-cover {
+      height: 170px; display: flex; align-items: center; justify-content: center;
+      padding: 1rem; position: relative; overflow: hidden;
+    }
+    .book-cover::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.25));
+    }
+    .book-cover-title {
+      font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem;
+      font-weight: 700; color: rgba(255,255,255,0.85); text-align: center;
+      line-height: 1.25; position: relative; z-index: 1;
+    }
+    .c1 { background: linear-gradient(135deg,#1b9984,#0d4a40); }
+    .c2 { background: linear-gradient(135deg,#e8553e,#7a1f0d); }
+    .c3 { background: linear-gradient(135deg,#f0b429,#9a6c00); }
+    .c4 { background: linear-gradient(135deg,#7c3aed,#3a0d8f); }
+    .c5 { background: linear-gradient(135deg,#18120f,#44303a); }
+    .c6 { background: linear-gradient(135deg,#e8553e,#f0b429); }
+    .book-info { padding: 1rem 1rem 1.2rem; }
+    .book-year { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+    .book-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.3; }
+    .book-desc { font-size: 0.8rem; line-height: 1.6; color: var(--muted); }
+    .book-tag {
+      display: inline-block; margin-top: 0.7rem;
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 1px;
+    }
+    .t-nf { background: var(--gold); color: var(--ink); }
+    .t-inf { background: var(--teal); color: #fff; }
+    .t-ens { background: #7c3aed; color: #fff; }
+    .t-fic { background: var(--coral); color: #fff; }
+
+    /* Docs */
+    .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .doc-card {
+      background: var(--ink); border-radius: 2px; padding: 1.8rem;
+      position: relative; overflow: hidden; transition: transform 0.2s;
+    }
+    .doc-card:hover { transform: translateY(-3px); }
+    .doc-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%; background: var(--teal);
+    }
+    .doc-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .doc-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: 0.5rem; line-height: 1.3; }
+    .doc-desc { font-size: 0.82rem; line-height: 1.6; color: rgba(247,242,234,0.55); }
+    .doc-role { margin-top: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .doc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+    .doc-role span { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(247,242,234,0.35); }
+    .docs-note { margin-top: 1.5rem; font-size: 0.78rem; color: var(--muted); font-style: italic; }
+
+    /* CONTACTO */
+    #contacto { background: #fff; border-top: 2px solid var(--ink); }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: start; }
+    .contact-intro h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; line-height: 1.3; }
+    .contact-intro p { font-size: 0.92rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.5rem; }
+    .contact-line { display: flex; align-items: center; gap: 0.9rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(26,18,15,0.1); }
+    .cicon { width: 36px; height: 36px; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .ci1 { background: var(--coral); }
+    .ci2 { background: var(--teal); }
+    .cline-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .cline-val { font-size: 0.88rem; color: var(--ink); }
+    .cf { display: flex; flex-direction: column; gap: 0.85rem; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    .fg { display: flex; flex-direction: column; gap: 0.35rem; }
+    .fg label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--muted); }
+    .fg input, .fg textarea, .fg select {
+      font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+      padding: 0.7rem 0.9rem; border: 2px solid rgba(26,18,15,0.15);
+      border-radius: 2px; background: var(--cream); color: var(--ink);
+      outline: none; transition: border-color 0.2s; resize: vertical;
+    }
+    .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--teal); }
+    .fg textarea { min-height: 120px; }
+    .cf-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.3rem; }
+    .cf-note { font-size: 0.72rem; color: var(--muted); }
+    .cf-btn {
+      font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.85rem 2rem; background: var(--ink); color: var(--cream);
+      border: none; border-radius: 2px; cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cf-btn:hover { background: var(--coral); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink); padding: 2.5rem 8vw;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .f-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 900; color: var(--cream); }
+    .f-brand em { font-style: italic; color: var(--coral); }
+    .f-copy { font-size: 0.72rem; color: rgba(247,242,234,0.35); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+    .hero-left > * { opacity:0; animation: fadeUp 0.65s ease forwards; }
+    .hero-pill { animation-delay: 0.1s; }
+    .hero-name { animation-delay: 0.25s; }
+    .hero-sub  { animation-delay: 0.4s; }
+    .hero-btn  { animation-delay: 0.52s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 4rem 6vw; }
+      .hero-right { min-height: 240px; }
+      .sobre-grid { grid-template-columns: 1fr; }
+      .sobre-img { max-height: 300px; }
+      .books-grid { grid-template-columns: 1fr 1fr; }
+      .docs-grid { grid-template-columns: 1fr; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cf-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 540px) {
+      .nav-links { display: none; }
+      .books-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#hero">Inês <em>Leitão</em></a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#obra">Obra</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <span class="hero-pill">Escritora · Realizadora · Produtora</span>
+      <h1 class="hero-name">Inês<em>Leitão</em></h1>
+      <p class="hero-sub">Autora de ficção, não-ficção, teatro e documentários. Produtora executiva. Lisboa, 1981.</p>
+      <a class="hero-btn" href="#obra">
+        Ver obra
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-right">
+      <div class="hr-bigtext">IL</div>
+      <div class="hr-block hr-b1"></div>
+      <div class="hr-block hr-b2"></div>
+      <div class="hr-block hr-b3"></div>
+      <div class="hr-caption">
+        <span class="hr-caption-main">Escritora &amp; Realizadora</span>
+        <span class="hr-caption-sub">Lisboa, Portugal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="inner">
+      <div class="sec-head">
+        <p class="sec-label">01 — Sobre</p>
+        <h2 class="sec-title">Quem somos</h2>
+      </div>
+      <div class="sobre-grid">
+        <div>
+          <div class="sobre-img">
+            <div class="sobre-img-inner"><span>IL</span></div>
+          </div>
+          <p style="font-size:0.7rem;color:var(--muted);margin-top:0.6rem;letter-spacing:0.06em;">Inês Leitão</p>
+          <div class="sobre-tags">
+            <span class="stag s1">Escritora</span>
+            <span class="stag s2">Realizadora</span>
+            <span class="stag s3">Dramaturga</span>
+            <span class="stag s4">Produtora</span>
+          </div>
+        </div>
+        <div class="sobre-body">
+          <div class="sobre-quote">
+            <p>«Duas irmãs: Daniela Leitão e Inês Leitão. Uma da imagem, a outra das palavras. Juntaram-se na aventura dos documentários em 2013 e a partir daí fizeram juntas institucionais e programas de televisão. O que as move? Uma é fã do pequeno ecrã desde o dia em que o Homem pôs o pé na Lua, a outra é viciada em histórias desde 1981.»</p>
+          </div>
+          
+          <h3 style="font-family:'Playfair Display', serif; font-weight:700; margin: 1rem 0 0.5rem 0; color:var(--ink);">Inês Leitão</h3>
+          <p>Nasceu a <strong>1 de julho de 1981 em Lisboa</strong>. É licenciada em Estudos Anglo-Americanos pela Faculdade de Letras da Universidade de Lisboa e pós-graduada em Assessoria Empresarial pelo ISLA. Teve a sua primeira publicação na revista <em>Quase</em> em 2001. Seguiram-se colaborações em “Os Fazedores de Letras” durante o ano de 2003. Em maio de 2004 cria na blogosfera <em>bocadosdecarnepelasparedesdoquarto</em> e em 2005 inicia a sua participação no blog Prazeres Minúsculos. Participa em 2006 na Revista “Sítio” e lança o seu 1º livro em 2007 <strong>“Quarto Escuro”</strong> (Ed. Livrododia).</p>
+          <p>É responsável pelo projecto “6 Autores com o Plano Nacional de Leitura” (abril 2008) e em julho de 2008 é uma das vencedoras da iniciativa dos Artistas Unidos <strong>“Isto não é um concurso”</strong> com a peça <strong>“A última história de Werther”</strong>, encenada por João Meireles. Em setembro do mesmo ano publica a sua primeira história infantil <strong>“Pitopeca em África: a história de uma Missão em Maputo”</strong> (Ed. Paulinas). Foi eleita pela revista ELLE Portugal como um dos <strong>20 novos Talentos</strong> para o futuro na dramaturgia portuguesa e em 2010 escreve exclusivamente para o blog Desfibrilhador.</p>
+          <p>Em 2012 é convidada a participar com crónicas semanais no programa de rádio “Manual de Instruções” de Fernanda Almeida (RDP África). É a autora do <strong>“Manifesto pela saída de emergência”</strong> e <strong>“Manifesto pela utilização de transportes públicos”</strong>, encenados no projeto “Coro das Vontades” (Teatro Maria Matos, julho 2012). Os dois Manifestos foram musicados e compilados no segundo CD do pianista português Tiago Sousa.</p>
+          <p>É autora do documentário <strong>“As Mulheres de Deus”</strong> (RTP2, 2012), obra baseada na vida de quatro irmãs hospitaleiras do Sagrado Coração de Jesus e do seu trabalho com doentes mentais na Casa de Saúde da Idanha, em Sintra. É ainda autora do guião e da ideia original do documentário <strong>“A Vida de Rafi”</strong> (o primeiro trabalho audiovisual documental gravado exclusivamente em smartphone em Portugal).</p>
+          <p>Em março de 2013 cria a sua primeira instalação artística: <strong>“O Corpo”</strong>. Em janeiro de 2014 publica o seu terceiro livro <strong>“Se o meu corpo fosse um homem”</strong> (Ed. Chiado editora). Ainda em 2014 assina o guião e a ideia original do documentário “Pequenos Heróis” (RTP2). Em fevereiro desse ano é recebida em audiência geral em Roma para entregar uma cópia do seu documentário <strong>“O Meu bairro”</strong> (RTP2, 2014) ao Papa Francisco. Em dezembro escreve o guião do documentário <strong>“O Padre das Prisões”</strong> (RTP2, 2014), e em junho 2015 é apresentado o livro homónimo (Ed. Cáritas).</p>
+          <p>Em 2017, apresenta o documentário <strong>“Este é o meu corpo”</strong> em parceria com a Secretaria de Estado para a Cidadania e Igualdade — o trabalho é levado à cimeira da OMS de 2017 em Nova Iorque. Realiza a campanha da Cáritas portuguesa sobre a devastação do ciclone Idai em 2019 – <strong>“Recuperar a vida, Restaurar a esperança”</strong>. Em 2020 realiza o documentário sobre a vida e obra do poeta Sebastião Alba – <strong>“Ninguém como nós conhece o sol”</strong>.</p>
+          <p>Em 2021 estreia a minissérie <strong>“O MEU ÚLTIMO NATAL”</strong> (RTP2) e apresenta dois programas na RTP África: <strong>“PODER NO FEMININO”</strong> e <strong>“AFROCUTZ”</strong>, um magazine sobre representatividade feminina africana no cinema mundial. Em 2023 edita o livro <strong>“A Maternidade não é para meninos”</strong> (Grupo LeYa). Com a mudança da sua vida pessoal para o Alentejo, inspira-se no fenómeno da imigração naquela região e realiza o documentário <strong>“Alentejo Calling”</strong> com o apoio da RTP África, Rádio Renascença e 7 Margens.</p>
+          
+          <div class="irman">
+            <h4>Daniela Leitão</h4>
+            <p>Daniela Gameiro Leitão nasceu a 5 de Agosto de 1969 em Coimbra. A 1 de Agosto de 1992 inicia a sua experiência profissional no canal SIC Televisão. Em Agosto de 1993 iniciou o seu percurso como editora de imagem na Produtora Duvideo. Trabalhou em diversas produtoras como Nova Imagem, Valentim de Carvalho, Eyeworks, Mundo 4K entre outras.</p>
+            <p>Editou vários géneros: entretenimento (<em>Música Maestro, Família Família, Verão Total</em>), sitcoms (<em>Pensão Estrela, Camilo e Filho, Malucos do Riso</em>), magazines (<em>2001, 2010, Da Terra ao Mar, Latitudes</em>) e séries (<em>Alves dos Reis, Médico de Família</em>). É responsável pela edição de quatro filmes promocionais das Ilhas de Cabo Verde para a RTP África e por institucionais para EDP, L’Oréal, Bayer, Carris e Grupo Solverde.</p>
+            <p>Em Agosto de 2012 realiza o Documentário <strong>“Mulheres de Deus”</strong>. Em Fevereiro de 2013 realiza o primeiro documentário gravado em Portugal através de smartphone – <strong>“A vida de Rafi”</strong>. Em Setembro de 2013 realiza <strong>“O nosso bairro”</strong> (Zambujal) e em Novembro <strong>“Pequenos Heróis”</strong> (voluntários que alimentam sem-abrigo no Porto).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBRA -->
+  <section id="obra">
+    <div class="inner">
+      <div class="sec-head">
+        <p class="sec-label">02 — Obra</p>
+        <h2 class="sec-title">Trabalho</h2>
+      </div>
+      <div class="obra-tabs">
+        <button class="obra-tab active" onclick="showTab('livros',this)">Livros</button>
+        <button class="obra-tab" onclick="showTab('docs',this)">Documentários</button>
+      </div>
+
+      <div class="obra-panel active" id="panel-livros">
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover c6"><span class="book-cover-title">A Maternidade Não é Para Meninos</span></div>
+            <div class="book-info">
+              <p class="book-year">2023 · Grupo LeYa</p>
+              <h3 class="book-title">A Maternidade Não é Para Meninos</h3>
+              <p class="book-desc">Testemunho sobre o pós-parto, com a colaboração da especialista Raquel Robalo Fernandes.</p>
+              <span class="book-tag t-ens">Ensaio</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover c4"><span class="book-cover-title">O Último Exorcista de Lisboa</span></div>
+            <div class="book-info">
+              <p class="book-year">2020 · Guerra &amp; Paz</p>
+              <h3 class="book-title">O Último Exorcista de Lisboa</h3>
+              <p class="book-desc">A vida do Padre Gregório Verdonk, confessor de Salazar, com base em diários inéditos.</p>
+              <span class="book-tag t-nf">Não-Ficção</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover c1"><span class="book-cover-title">O Menino que Não Via o Sol</span></div>
+            <div class="book-info">
+              <p class="book-year">2020</p>
+              <h3 class="book-title">O Menino que Não Via o Sol</h3>
+             
