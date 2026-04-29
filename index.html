@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inês Leitão · Escritora, Realizadora, Produtora</title>
-  <meta name="description" content="Site oficial de Inês Leitão, escritora, realizadora e produtora. Autora de 'A Maternidade não é para meninos', documentários para RTP e projetos independentes." />
+  <title>ID Produções Criativas · Inês &amp; Daniela Leitão</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -20,7 +19,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
-
+ 
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 99;
@@ -30,10 +29,11 @@
       border-bottom: 2px solid var(--ink);
     }
     .nav-logo {
-      font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem;
+      font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem;
       color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
     }
     .nav-logo em { font-style: italic; color: var(--coral); }
+    .nav-logo span { font-weight: 300; font-size: 0.75rem; letter-spacing: 0.04em; display: block; color: var(--muted); font-family: 'DM Sans', sans-serif; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
@@ -45,7 +45,7 @@
       width: 0; height: 2px; background: var(--coral); transition: width 0.2s;
     }
     .nav-links a:hover::after { width: 100%; }
-
+ 
     /* HERO */
     #hero {
       min-height: 100vh; padding-top: 68px;
@@ -99,7 +99,7 @@
     }
     .hr-caption-main { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: var(--cream); }
     .hr-caption-sub { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
-
+ 
     /* SHARED */
     section { padding: 6rem 0; }
     .inner { max-width: 1100px; margin: 0 auto; padding: 0 8vw; }
@@ -112,7 +112,7 @@
       font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem);
       font-weight: 700; color: var(--ink); letter-spacing: -0.02em;
     }
-
+ 
     /* SOBRE */
     #sobre { background: #fff; border-top: 2px solid var(--ink); }
     .sobre-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start; }
@@ -138,7 +138,7 @@
     .s2 { background: var(--teal); color: #fff; }
     .s3 { background: var(--coral); color: #fff; }
     .s4 { background: var(--ink); color: var(--cream); }
-
+ 
     .sobre-body p {
       font-size: 1rem; line-height: 1.85; color: #4a3e40; margin-bottom: 1.2rem;
     }
@@ -152,12 +152,7 @@
       font-family: 'Playfair Display', serif; font-style: italic;
       font-size: 1.15rem !important; color: var(--ink) !important; margin: 0 !important;
     }
-    
-    /* dual bio styling */
-    .irman { margin-top: 2rem; border-top: 1px solid rgba(26,18,15,0.1); padding-top: 1.5rem; }
-    .irman h4 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--coral); letter-spacing: -0.2px; }
-    .irman p { font-size: 0.92rem; margin-bottom: 0.7rem; }
-
+ 
     /* OBRA */
     #obra { background: var(--cream); border-top: 2px solid var(--ink); }
     .obra-tabs {
@@ -175,7 +170,7 @@
     .obra-tab:hover:not(.active) { background: rgba(26,18,15,0.06); }
     .obra-panel { display: none; }
     .obra-panel.active { display: block; }
-
+ 
     /* Books */
     .books-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
     .book-card {
@@ -215,7 +210,7 @@
     .t-inf { background: var(--teal); color: #fff; }
     .t-ens { background: #7c3aed; color: #fff; }
     .t-fic { background: var(--coral); color: #fff; }
-
+ 
     /* Docs */
     .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
     .doc-card {
@@ -234,7 +229,7 @@
     .doc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
     .doc-role span { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(247,242,234,0.35); }
     .docs-note { margin-top: 1.5rem; font-size: 0.78rem; color: var(--muted); font-style: italic; }
-
+ 
     /* CONTACTO */
     #contacto { background: #fff; border-top: 2px solid var(--ink); }
     .contact-wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: start; }
@@ -268,7 +263,7 @@
       transition: background 0.2s, transform 0.2s;
     }
     .cf-btn:hover { background: var(--coral); transform: translateY(-2px); }
-
+ 
     /* FOOTER */
     footer {
       background: var(--ink); padding: 2.5rem 8vw;
@@ -278,7 +273,7 @@
     .f-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 900; color: var(--cream); }
     .f-brand em { font-style: italic; color: var(--coral); }
     .f-copy { font-size: 0.72rem; color: rgba(247,242,234,0.35); }
-
+ 
     /* ANIMATIONS */
     @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
     .hero-left > * { opacity:0; animation: fadeUp 0.65s ease forwards; }
@@ -286,7 +281,7 @@
     .hero-name { animation-delay: 0.25s; }
     .hero-sub  { animation-delay: 0.4s; }
     .hero-btn  { animation-delay: 0.52s; }
-
+ 
     /* RESPONSIVE */
     @media (max-width: 860px) {
       #hero { grid-template-columns: 1fr; }
@@ -307,22 +302,22 @@
   </style>
 </head>
 <body>
-
+ 
   <nav>
-    <a class="nav-logo" href="#hero">Inês <em>Leitão</em></a>
+    <a class="nav-logo" href="#hero">ID Produções <em>Criativas</em><span>por Inês &amp; Daniela Leitão</span></a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#obra">Obra</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
-
+ 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <span class="hero-pill">Escritora · Realizadora · Produtora</span>
-      <h1 class="hero-name">Inês<em>Leitão</em></h1>
-      <p class="hero-sub">Autora de ficção, não-ficção, teatro e documentários. Produtora executiva. Lisboa, 1981.</p>
+      <span class="hero-pill">Documentários · Televisão · Ficção</span>
+      <h1 class="hero-name">ID Produções<em>Criativas</em></h1>
+      <p class="hero-sub">Duas irmãs, uma da imagem e a outra das palavras. Documentários, programas de televisão e ficção desde 2013. Lisboa &amp; Alentejo.</p>
       <a class="hero-btn" href="#obra">
         Ver obra
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -331,30 +326,30 @@
       </a>
     </div>
     <div class="hero-right">
-      <div class="hr-bigtext">IL</div>
+      <div class="hr-bigtext">ID</div>
       <div class="hr-block hr-b1"></div>
       <div class="hr-block hr-b2"></div>
       <div class="hr-block hr-b3"></div>
       <div class="hr-caption">
-        <span class="hr-caption-main">Escritora &amp; Realizadora</span>
+        <span class="hr-caption-main">Produções Criativas</span>
         <span class="hr-caption-sub">Lisboa, Portugal</span>
       </div>
     </div>
   </section>
-
+ 
   <!-- SOBRE -->
   <section id="sobre">
     <div class="inner">
       <div class="sec-head">
         <p class="sec-label">01 — Sobre</p>
-        <h2 class="sec-title">Quem somos</h2>
+        <h2 class="sec-title">Quem sou</h2>
       </div>
       <div class="sobre-grid">
         <div>
           <div class="sobre-img">
             <div class="sobre-img-inner"><span>IL</span></div>
           </div>
-          <p style="font-size:0.7rem;color:var(--muted);margin-top:0.6rem;letter-spacing:0.06em;">Inês Leitão</p>
+          <p style="font-size:0.7rem;color:var(--muted);margin-top:0.6rem;letter-spacing:0.06em;">Fotografia de autora</p>
           <div class="sobre-tags">
             <span class="stag s1">Escritora</span>
             <span class="stag s2">Realizadora</span>
@@ -364,29 +359,18 @@
         </div>
         <div class="sobre-body">
           <div class="sobre-quote">
-            <p>«Duas irmãs: Daniela Leitão e Inês Leitão. Uma da imagem, a outra das palavras. Juntaram-se na aventura dos documentários em 2013 e a partir daí fizeram juntas institucionais e programas de televisão. O que as move? Uma é fã do pequeno ecrã desde o dia em que o Homem pôs o pé na Lua, a outra é viciada em histórias desde 1981.»</p>
+            <p>«Duas irmãs: Daniela Leitão e Inês Leitão. Uma da imagem, a outra das palavras. Juntaram-se na aventura dos documentários em 2013.»</p>
           </div>
-          
-          <h3 style="font-family:'Playfair Display', serif; font-weight:700; margin: 1rem 0 0.5rem 0; color:var(--ink);">Inês Leitão</h3>
-          <p>Nasceu a <strong>1 de julho de 1981 em Lisboa</strong>. É licenciada em Estudos Anglo-Americanos pela Faculdade de Letras da Universidade de Lisboa e pós-graduada em Assessoria Empresarial pelo ISLA. Teve a sua primeira publicação na revista <em>Quase</em> em 2001. Seguiram-se colaborações em “Os Fazedores de Letras” durante o ano de 2003. Em maio de 2004 cria na blogosfera <em>bocadosdecarnepelasparedesdoquarto</em> e em 2005 inicia a sua participação no blog Prazeres Minúsculos. Participa em 2006 na Revista “Sítio” e lança o seu 1º livro em 2007 <strong>“Quarto Escuro”</strong> (Ed. Livrododia).</p>
-          <p>É responsável pelo projecto “6 Autores com o Plano Nacional de Leitura” (abril 2008) e em julho de 2008 é uma das vencedoras da iniciativa dos Artistas Unidos <strong>“Isto não é um concurso”</strong> com a peça <strong>“A última história de Werther”</strong>, encenada por João Meireles. Em setembro do mesmo ano publica a sua primeira história infantil <strong>“Pitopeca em África: a história de uma Missão em Maputo”</strong> (Ed. Paulinas). Foi eleita pela revista ELLE Portugal como um dos <strong>20 novos Talentos</strong> para o futuro na dramaturgia portuguesa e em 2010 escreve exclusivamente para o blog Desfibrilhador.</p>
-          <p>Em 2012 é convidada a participar com crónicas semanais no programa de rádio “Manual de Instruções” de Fernanda Almeida (RDP África). É a autora do <strong>“Manifesto pela saída de emergência”</strong> e <strong>“Manifesto pela utilização de transportes públicos”</strong>, encenados no projeto “Coro das Vontades” (Teatro Maria Matos, julho 2012). Os dois Manifestos foram musicados e compilados no segundo CD do pianista português Tiago Sousa.</p>
-          <p>É autora do documentário <strong>“As Mulheres de Deus”</strong> (RTP2, 2012), obra baseada na vida de quatro irmãs hospitaleiras do Sagrado Coração de Jesus e do seu trabalho com doentes mentais na Casa de Saúde da Idanha, em Sintra. É ainda autora do guião e da ideia original do documentário <strong>“A Vida de Rafi”</strong> (o primeiro trabalho audiovisual documental gravado exclusivamente em smartphone em Portugal).</p>
-          <p>Em março de 2013 cria a sua primeira instalação artística: <strong>“O Corpo”</strong>. Em janeiro de 2014 publica o seu terceiro livro <strong>“Se o meu corpo fosse um homem”</strong> (Ed. Chiado editora). Ainda em 2014 assina o guião e a ideia original do documentário “Pequenos Heróis” (RTP2). Em fevereiro desse ano é recebida em audiência geral em Roma para entregar uma cópia do seu documentário <strong>“O Meu bairro”</strong> (RTP2, 2014) ao Papa Francisco. Em dezembro escreve o guião do documentário <strong>“O Padre das Prisões”</strong> (RTP2, 2014), e em junho 2015 é apresentado o livro homónimo (Ed. Cáritas).</p>
-          <p>Em 2017, apresenta o documentário <strong>“Este é o meu corpo”</strong> em parceria com a Secretaria de Estado para a Cidadania e Igualdade — o trabalho é levado à cimeira da OMS de 2017 em Nova Iorque. Realiza a campanha da Cáritas portuguesa sobre a devastação do ciclone Idai em 2019 – <strong>“Recuperar a vida, Restaurar a esperança”</strong>. Em 2020 realiza o documentário sobre a vida e obra do poeta Sebastião Alba – <strong>“Ninguém como nós conhece o sol”</strong>.</p>
-          <p>Em 2021 estreia a minissérie <strong>“O MEU ÚLTIMO NATAL”</strong> (RTP2) e apresenta dois programas na RTP África: <strong>“PODER NO FEMININO”</strong> e <strong>“AFROCUTZ”</strong>, um magazine sobre representatividade feminina africana no cinema mundial. Em 2023 edita o livro <strong>“A Maternidade não é para meninos”</strong> (Grupo LeYa). Com a mudança da sua vida pessoal para o Alentejo, inspira-se no fenómeno da imigração naquela região e realiza o documentário <strong>“Alentejo Calling”</strong> com o apoio da RTP África, Rádio Renascença e 7 Margens.</p>
-          
-          <div class="irman">
-            <h4>Daniela Leitão</h4>
-            <p>Daniela Gameiro Leitão nasceu a 5 de Agosto de 1969 em Coimbra. A 1 de Agosto de 1992 inicia a sua experiência profissional no canal SIC Televisão. Em Agosto de 1993 iniciou o seu percurso como editora de imagem na Produtora Duvideo. Trabalhou em diversas produtoras como Nova Imagem, Valentim de Carvalho, Eyeworks, Mundo 4K entre outras.</p>
-            <p>Editou vários géneros: entretenimento (<em>Música Maestro, Família Família, Verão Total</em>), sitcoms (<em>Pensão Estrela, Camilo e Filho, Malucos do Riso</em>), magazines (<em>2001, 2010, Da Terra ao Mar, Latitudes</em>) e séries (<em>Alves dos Reis, Médico de Família</em>). É responsável pela edição de quatro filmes promocionais das Ilhas de Cabo Verde para a RTP África e por institucionais para EDP, L’Oréal, Bayer, Carris e Grupo Solverde.</p>
-            <p>Em Agosto de 2012 realiza o Documentário <strong>“Mulheres de Deus”</strong>. Em Fevereiro de 2013 realiza o primeiro documentário gravado em Portugal através de smartphone – <strong>“A vida de Rafi”</strong>. Em Setembro de 2013 realiza <strong>“O nosso bairro”</strong> (Zambujal) e em Novembro <strong>“Pequenos Heróis”</strong> (voluntários que alimentam sem-abrigo no Porto).</p>
-          </div>
+          <p>Nasceu a <strong>1 de julho de 1981, em Lisboa</strong>. É licenciada em Estudos Anglo-Americanos pela Faculdade de Letras da Universidade de Lisboa e pós-graduada em Assessoria Empresarial pelo ISLA. Teve a sua primeira publicação na revista <em>Quase</em> em 2001.</p>
+          <p>Em 2008 é uma das vencedoras da iniciativa dos Artistas Unidos <em>«Isto não é um concurso»</em> com a peça <strong>A Última História de Werther</strong>, encenada por João Meireles. Foi eleita pela revista <em>ELLE Portugal</em> como um dos <strong>20 novos Talentos</strong> para o futuro da dramaturgia portuguesa.</p>
+          <p>É autora dos <em>Manifestos pela Saída de Emergência</em> e <em>pela Utilização de Transportes Públicos</em>, encenados no projeto <strong>Coro das Vontades</strong> (Teatro Maria Matos, 2012), posteriormente musicados pelo pianista Tiago Sousa.</p>
+          <p>Desde 2013 dedica-se ao audiovisual como guionista e realizadora, com documentários exibidos na <strong>RTP2, RTP África</strong> e apresentados em fóruns internacionais como a <strong>cimeira da OMS em Nova Iorque</strong> (2017). Em fevereiro de 2014 foi recebida em audiência geral em Roma para entregar ao <strong>Papa Francisco</strong> uma cópia do documentário <em>O Meu Bairro</em>.</p>
+          <p>Em 2023 edita <strong>A Maternidade não é para meninos</strong> (Grupo LeYa) e realiza o documentário <strong>Alentejo Calling</strong>, inspirado no fenómeno da imigração no Alentejo, com o apoio da RTP África, Rádio Renascença e 7 Margens.</p>
         </div>
       </div>
     </div>
   </section>
-
+ 
   <!-- OBRA -->
   <section id="obra">
     <div class="inner">
@@ -398,13 +382,13 @@
         <button class="obra-tab active" onclick="showTab('livros',this)">Livros</button>
         <button class="obra-tab" onclick="showTab('docs',this)">Documentários</button>
       </div>
-
+ 
       <div class="obra-panel active" id="panel-livros">
         <div class="books-grid">
           <div class="book-card">
             <div class="book-cover c6"><span class="book-cover-title">A Maternidade Não é Para Meninos</span></div>
             <div class="book-info">
-              <p class="book-year">2023 · Grupo LeYa</p>
+              <p class="book-year">2023 · Oficina do Livro</p>
               <h3 class="book-title">A Maternidade Não é Para Meninos</h3>
               <p class="book-desc">Testemunho sobre o pós-parto, com a colaboração da especialista Raquel Robalo Fernandes.</p>
               <span class="book-tag t-ens">Ensaio</span>
@@ -424,4 +408,215 @@
             <div class="book-info">
               <p class="book-year">2020</p>
               <h3 class="book-title">O Menino que Não Via o Sol</h3>
-             
+              <p class="book-desc">Uma história de superação e descoberta.</p>
+              <span class="book-tag t-inf">Infantil</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover c3"><span class="book-cover-title">Se o Meu Corpo Fosse Um Homem</span></div>
+            <div class="book-info">
+              <p class="book-year">2014</p>
+              <h3 class="book-title">Se o Meu Corpo Fosse Um Homem</h3>
+              <p class="book-desc">Um olhar íntimo sobre o corpo feminino e a identidade.</p>
+              <span class="book-tag t-ens">Ensaio</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover c2"><span class="book-cover-title">Pitopeca em África</span></div>
+            <div class="book-info">
+              <p class="book-year">2008</p>
+              <h3 class="book-title">Pitopeca em África</h3>
+              <p class="book-desc">Primeira história infantil. Uma aventura em Maputo cheia de cor e descoberta.</p>
+              <span class="book-tag t-inf">Infantil</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover c5"><span class="book-cover-title">Quarto Escuro</span></div>
+            <div class="book-info">
+              <p class="book-year">2007 · Livrododia Editores</p>
+              <h3 class="book-title">Quarto Escuro</h3>
+              <p class="book-desc">Primeira publicação: micronarrativas sobre pessoas, sentimentos e apegos.</p>
+              <span class="book-tag t-fic">Micronarrativas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="obra-panel" id="panel-docs">
+        <div class="docs-grid">
+          <div class="doc-card">
+            <p class="doc-label">RTP África · 2024</p>
+            <h3 class="doc-title">Alentejo Calling</h3>
+            <p class="doc-desc">Documentário sobre o fenómeno da imigração no Alentejo. Apoio da RTP África, Rádio Renascença e 7 Margens.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Realizadora · Guionista</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP África · 2021</p>
+            <h3 class="doc-title">O Meu Último Natal</h3>
+            <p class="doc-desc">Minissérie de três episódios sobre o último Natal de três portugueses que viveram a guerra colonial.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Realizadora · Guionista</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP África · 2021</p>
+            <h3 class="doc-title">Poder no Feminino</h3>
+            <p class="doc-desc">Seis mulheres de ascendência africana com percursos de exceção na academia, negócios, política e jornalismo.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Produtora · Apresentadora</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP África · 2021</p>
+            <h3 class="doc-title">Afrocutz</h3>
+            <p class="doc-desc">Magazine televisivo sobre representatividade feminina africana no cinema mundial, com realizadoras de África do Sul, Gana, Etiópia e outros países.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Produtora · Apresentadora</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">2020</p>
+            <h3 class="doc-title">Ninguém como nós conhece o sol</h3>
+            <p class="doc-desc">Documentário sobre a vida e obra do poeta marginal Sebastião Alba, que lutou pela libertação de Moçambique ao lado da FRELIMO.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Realizadora · Guionista</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">Cáritas · 2019</p>
+            <h3 class="doc-title">Recuperar a vida, Restaurar a esperança</h3>
+            <p class="doc-desc">Campanha sobre a devastação do ciclone Idai em Moçambique, um ano após a tragédia.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Realizadora</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">OMS Nova Iorque · 2017</p>
+            <h3 class="doc-title">Este é o meu corpo</h3>
+            <p class="doc-desc">Documentário sobre mutilação genital feminina, levado à cimeira da OMS em 2017. Parceria com a Secretaria de Estado para a Cidadania e Igualdade.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Realizadora · Guionista</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP2 · 2014</p>
+            <h3 class="doc-title">O Padre das Prisões</h3>
+            <p class="doc-desc">Retrato do Padre João Gonçalves e o seu trabalho nas prisões portuguesas. Deu origem ao livro homónimo (Ed. Cáritas).</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Guionista · Ideia Original</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP2 · 2014</p>
+            <h3 class="doc-title">O Meu Bairro</h3>
+            <p class="doc-desc">A vida dos missionários da Consolata no bairro social do Zambujal. Uma cópia foi entregue ao Papa Francisco em audiência em Roma.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Guionista · Ideia Original</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP2 · 2014</p>
+            <h3 class="doc-title">Pequenos Heróis</h3>
+            <p class="doc-desc">Retrato dos voluntários que alimentam sem-abrigo na cidade do Porto aos domingos.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Guionista · Ideia Original</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">RTP2 · 2012</p>
+            <h3 class="doc-title">As Mulheres de Deus</h3>
+            <p class="doc-desc">A vida de quatro irmãs hospitaleiras do Sagrado Coração de Jesus e o seu trabalho com doentes mentais na Casa de Saúde da Idanha, em Sintra.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Guionista · Ideia Original</span></div>
+          </div>
+          <div class="doc-card">
+            <p class="doc-label">2013</p>
+            <h3 class="doc-title">A Vida de Rafi</h3>
+            <p class="doc-desc">A vida de uma writer/rapper portuguesa no Porto. O primeiro documentário gravado exclusivamente em smartphone em Portugal.</p>
+            <div class="doc-role"><span class="doc-dot"></span><span>Guionista · Ideia Original</span></div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="inner">
+      <div class="sec-head">
+        <p class="sec-label">03 — Contacto</p>
+        <h2 class="sec-title">Fale connosco</h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-intro">
+          <h3>ID Produções Criativas</h3>
+          <p>Para projetos audiovisuais, parcerias, imprensa, livros ou convites para eventos, fale directamente com a nossa equipa.</p>
+          <div class="contact-line">
+            <div class="cicon ci1">📧</div>
+            <div>
+              <p class="cline-label">Inês Leitão</p>
+              <p class="cline-val">inesleitao@idproducoescriativas.com</p>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="cicon ci1">📧</div>
+            <div>
+              <p class="cline-label">Mónica Pascoal</p>
+              <p class="cline-val">monicapascoal@idproducoecriativas.com</p>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="cicon ci2">📧</div>
+            <div>
+              <p class="cline-label">Geral</p>
+              <p class="cline-val">info@idproducoescriativas.com</p>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="cicon ci2">📞</div>
+            <div>
+              <p class="cline-label">Telefone</p>
+              <p class="cline-val">+351 910 883 619</p>
+            </div>
+          </div>
+        </div>
+        <form class="cf" onsubmit="submitForm(event)">
+          <div class="cf-row">
+            <div class="fg"><label for="nome">Nome</label><input type="text" id="nome" placeholder="O seu nome" required /></div>
+            <div class="fg"><label for="email">Email</label><input type="email" id="email" placeholder="o-seu@email.com" required /></div>
+          </div>
+          <div class="fg">
+            <label for="assunto">Assunto</label>
+            <select id="assunto">
+              <option value="">Selecione um assunto</option>
+              <option>Livros / Direitos</option>
+              <option>Projetos Audiovisuais</option>
+              <option>Imprensa</option>
+              <option>Convite para Eventos</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="fg"><label for="msg">Mensagem</label><textarea id="msg" placeholder="Escreva a sua mensagem..." required></textarea></div>
+          <div class="cf-footer">
+            <span class="cf-note">Resposta em até 3 dias úteis.</span>
+            <button class="cf-btn" type="submit">Enviar →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    <span class="f-brand">ID Produções <em>Criativas</em></span>
+    <span class="f-copy">© 2025 ID Produções Criativas. Todos os direitos reservados.</span>
+  </footer>
+ 
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.obra-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.obra-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+    function submitForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.cf-btn');
+      btn.textContent = 'Enviado ✓';
+      btn.style.background = '#1b9984';
+      setTimeout(() => { btn.textContent = 'Enviar →'; btn.style.background = ''; e.target.reset(); }, 3000);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(el => {
+        if (el.isIntersecting) { el.target.style.opacity='1'; el.target.style.transform='translateY(0)'; obs.unobserve(el.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.book-card, .doc-card, .sobre-body p').forEach(el => {
+      el.style.opacity='0'; el.style.transform='translateY(18px)';
+      el.style.transition='opacity 0.5s ease, transform 0.5s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
